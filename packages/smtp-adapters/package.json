@@ -1,0 +1,28 @@
+{
+  "name": "smtp-adapters",
+  "version": "1.0.0",
+  "description": "This is smtp-adapters",
+  "author": "stanim857@gmail.com",
+  "homepage": "",
+  "type": "module",
+  "license": "ISC",
+  "main": "lib/index.mjs",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "dependencies": {
+    "@sweet-monads/either": "^3.3.1",
+    "nodemailer": "^6.9.7",
+    "core": "*"
+  },
+  "devDependencies": {
+    "rollup": "^4.4.1"
+  }
+}

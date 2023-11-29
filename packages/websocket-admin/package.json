@@ -1,0 +1,32 @@
+{
+  "name": "websocket-admin",
+  "version": "1.0.0",
+  "description": "This is websocket-admin",
+  "author": "stanim857@gmail.com",
+  "homepage": "",
+  "type": "module",
+  "license": "ISC",
+  "main": "dist/app.mjs",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "start": "rollup --config --watch & node --watch ./dist/app.mjs"
+  },
+  "dependencies": {
+    "@sweet-monads/either": "^3.3.1",
+    "fastify": "^4.24.0",
+    "@fastify/websocket": "^8.2.0",
+    "rabbitmq-client": "^4.4.0",
+    "core": "*",
+    "postgresql-adapters": "*"
+  },
+  "devDependencies": {
+    "rollup": "^4.4.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "This is api",
+  "author": "stanim857@gmail.com",
+  "homepage": "",
+  "type": "module",
+  "license": "ISC",
+  "main": "dist/app.mjs",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "start": "rollup --config --watch & node --watch ./dist/app.mjs"
+  },
+  "dependencies": {
+    "@sweet-monads/either": "^3.3.1",
+    "rabbitmq-client": "^4.4.0",
+    "fastify": "^4.24.0",
+    "@fastify/cookie": "^9.2.0",
+    "@fastify/multipart": "^8.0.0",
+    "fast-content-type-parse": "^1.1.0",
+    "core": "*",
+    "postgresql-adapters": "*",
+    "smtp-adapters": "*",
+    "http-adapters": "*"
+  },
+  "devDependencies": {
+    "rollup": "^4.4.1"
+  }
+}

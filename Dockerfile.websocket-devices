@@ -1,0 +1,19 @@
+FROM node:20.10.0-alpine
+
+WORKDIR /app
+
+RUN npm i lerna -g
+
+RUN mkdir packages
+
+COPY packages/core ./packages/core
+COPY packages/postgresql-adapters ./packages/postgresql-adapters
+COPY packages/websocket-devices ./packages/websocket-devices
+
+COPY package.json lerna.json ./
+
+RUN npm install
+
+RUN /usr/local/bin/npx lerna run build
+
+CMD ["/usr/local/bin/npx", "lerna", "run", "start", "--scope=websocket-devices"]

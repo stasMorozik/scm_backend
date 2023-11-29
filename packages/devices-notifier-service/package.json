@@ -1,0 +1,30 @@
+{
+  "name": "devices-notifier-service",
+  "version": "1.0.0",
+  "description": "This is devices-notifier-service",
+  "author": "stanim857@gmail.com",
+  "homepage": "",
+  "type": "module",
+  "license": "ISC",
+  "main": "dist/app.mjs",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "start": "rollup --config --watch & node --watch ./dist/app.mjs"
+  },
+  "dependencies": {
+    "@sweet-monads/either": "^3.3.1",
+    "rabbitmq-client": "^4.4.0",
+    "core": "*",
+    "postgresql-adapters": "*"
+  },
+  "devDependencies": {
+    "rollup": "^4.4.1"
+  }
+}

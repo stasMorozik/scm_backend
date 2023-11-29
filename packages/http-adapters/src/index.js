@@ -1,0 +1,1 @@
+export { Transformer as ContentStorageTransformer } from './content/transformer';
