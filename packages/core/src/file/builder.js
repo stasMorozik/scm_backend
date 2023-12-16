@@ -19,7 +19,7 @@ const file = (entity, path) => {
   return valid(path).map((stat) => new Entity(
     entity.id,
     stat.size,
-    null,
+    entity.url,
     path,
     entity.created,
     entity.updated

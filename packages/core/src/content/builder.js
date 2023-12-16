@@ -18,7 +18,7 @@ const displayDuration = (entity, displayDuration) => {
   return valid(displayDuration).map(() => new Entity(
     entity.id,
     displayDuration,
-    null,
+    entity.file,
     entity.created,
     entity.updated
   ))

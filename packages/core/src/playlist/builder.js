@@ -19,7 +19,7 @@ const name = (entity, name) => {
   return valid(name).map(() => new Entity(
     entity.id,
     name,
-    [],
+    entity.contents,
     entity.created,
     entity.updated
   ))
