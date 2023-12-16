@@ -5,7 +5,7 @@ import { NotifierByMail } from 'smtp-adapters';
 import { info, warning, exception } from '../loggers';
 import { postgresPool } from '../postgres-pool';
 
-const usCase = new UseCaseConfirmationCodeCreating(
+const useCase = new UseCaseConfirmationCodeCreating(
   new InsertingConfirmationCode(postgresPool),
   new NotifierByMail(
     process.env.SMTP_HOST,
@@ -28,7 +28,7 @@ export const handlerCreating = async (request, reply) => {
     }
 
     if (parsed.type == 'application/json') {
-      const either = await usCase.create(request.body)
+      const either = await useCase.create(request.body)
 
       either.mapLeft((error) => {
         warning({

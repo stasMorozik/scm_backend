@@ -12,8 +12,6 @@ const useCase = new UseCaseDeviceGettingList(
 
 export const handlerGettingList = async (request, reply) => {
   try {
-    
-
     const either = await useCase.get({
       token: request.cookies["access-token"],
       pagi: {
